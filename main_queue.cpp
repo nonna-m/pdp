@@ -80,4 +80,3 @@ int main() {
     std::cout << "queue.isFull() " << queue.isFull() << std::endl;
     return 0;
 }
-
