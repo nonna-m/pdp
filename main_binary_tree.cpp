@@ -36,12 +36,16 @@ int BinaryTree::insert(int value) {
       if (next->right == NULL) {
         next->right = new Node(value);
         return next->right->data;
+      } else {
+        next = next->right;
       }
       next = next->right;
     } else {
       if (next->left == NULL) {
         next->left = new Node(value);
         return next->left->data;
+      } else {
+        next = next->left;
       }
       next = next->left;
     }
