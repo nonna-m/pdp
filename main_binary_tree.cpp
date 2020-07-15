@@ -33,19 +33,17 @@ int BinaryTree::insert(int value) {
   Node* next = getRoot();
   while (next != NULL) {
     if (value > next->data) {
-      if (next->right != NULL) {
-        next = next->right;
-      } else {
+      if (next->right == NULL) {
         next->right = new Node(value);
         return next->right->data;
       }
+      next = next->right;
     } else {
-      if (next->left != NULL) {
-        next = next->left;
-      } else {
+      if (next->left == NULL) {
         next->left = new Node(value);
         return next->left->data;
       }
+      next = next->left;
     }
   }
 }
